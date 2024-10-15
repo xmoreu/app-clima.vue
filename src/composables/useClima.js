@@ -13,7 +13,7 @@ export default function useClima() {
         clima.value=[]
         try {
             spinner.value=true
-            const url = `http://api.openweathermap.org/geo/1.0/direct?q=${ciudad},${pais}&limit=1&appid=${key}`
+            const url = `https://api.openweathermap.org/geo/1.0/direct?q=${ciudad},${pais}&limit=1&appid=${key}`
             const {data}=await axios(url)
             console.log(data)
             const {lat,lon}=data[0]
